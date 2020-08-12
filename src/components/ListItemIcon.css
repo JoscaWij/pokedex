@@ -1,3 +1,5 @@
 .listItem_icon {
-  padding: 0.5rem 1rem;
+  height: 4rem;
+  width: 4rem;
+  object-fit: contain;
 }
