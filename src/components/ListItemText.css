@@ -4,9 +4,11 @@
 
 .listItemText_title {
   font-weight: bolder;
+  display: block;
 }
 
 .listItemText_secondtitle {
+  display: block;
   font-size: 0.8rem;
   color: grey;
 }
