@@ -49,3 +49,11 @@
   );
   border-width: 5px 0;
 }
+
+.bottomNav {
+  background: linear-gradient(
+    90deg,
+    rgba(172, 199, 249, 1) 0%,
+    rgba(206, 255, 198, 1) 100%
+  );
+}
