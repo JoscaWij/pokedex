@@ -9,7 +9,7 @@ function App() {
         <input className="search" placeholder="  Enter Pokémon" />
       </header>
       <main className="pokemonList">Pokemons-List</main>
-      <div>Tabs</div>
+      <footer>Tabs</footer>
     </div>
   );
 }
