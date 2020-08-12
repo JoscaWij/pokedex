@@ -2,9 +2,6 @@
   display: flex;
   border-bottom: lightgray solid 1px;
   padding: 5px;
-}
-
-.listItem:link {
-  color: black;
+  color: inherit;
   text-decoration: none;
 }
