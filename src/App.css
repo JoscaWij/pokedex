@@ -5,8 +5,8 @@
 
 .app {
   height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .headerSearch {
@@ -23,7 +23,7 @@
 }
 
 .headerSearch > * {
-  margin: 0.3rem;
+  margin: 0.7rem;
 }
 
 .search {
@@ -42,7 +42,6 @@
 .pokemonList {
   background-color: white;
   color: black;
-  height: 87.6%;
 }
 
 .colorfulBorder {
