@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 import List from "./components/List";
+import ListItem from "./components/ListItem";
+import ListItemIcon from "./components/ListItemIcon";
 
 function App() {
   return (
@@ -10,7 +12,11 @@ function App() {
         <input className="search" placeholder="  Enter Pokémon" />
       </header>
       <main className="pokemonList colorfulBoder">
-        <List></List>
+        <List>
+          <ListItem href="#">
+            <ListItemIcon src="" alt=""></ListItemIcon>
+          </ListItem>
+        </List>
       </main>
       <footer>Tabs</footer>
     </div>
