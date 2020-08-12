@@ -30,13 +30,13 @@
 }
 
 .pokemonList {
-  background-color: blue;
+  background-color: white;
   color: white;
   height: 100%;
 }
 
-.colorfulBoder {
+.colorfulBorder {
   border-style: solid;
-  border-color: grey;
+  border-color: darkblue;
   border-width: 5px 0;
 }

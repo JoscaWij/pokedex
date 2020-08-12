@@ -3,6 +3,7 @@ import "./App.css";
 import List from "./components/List";
 import ListItem from "./components/ListItem";
 import ListItemIcon from "./components/ListItemIcon";
+import ListItemText from "./components/ListItemText";
 
 function App() {
   return (
@@ -11,10 +12,19 @@ function App() {
         Pokedex
         <input className="search" placeholder="  Enter Pokémon" />
       </header>
-      <main className="pokemonList colorfulBoder">
+      <main className="pokemonList colorfulBorder">
         <List>
           <ListItem href="#">
-            <ListItemIcon src="" alt=""></ListItemIcon>
+            <ListItemIcon src="" alt="" />
+            <ListItemText title="Bulbasaur" secondarytitle="#001" />
+          </ListItem>
+          <ListItem href="#">
+            <ListItemIcon src="" alt="" />
+            <ListItemText title="Ivysaur" secondarytitle="#002" />
+          </ListItem>
+          <ListItem href="#">
+            <ListItemIcon src="" alt="" />
+            <ListItemText title="Venusaur" secondarytitle="#003" />
           </ListItem>
         </List>
       </main>
