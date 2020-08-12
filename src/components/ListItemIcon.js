@@ -1,11 +1,7 @@
 import React from "react";
 
-function ListItemIcon(props) {
-  return (
-    <img src={props.src} alt={props.alt}>
-      {props.children}
-    </img>
-  );
+function ListItemIcon({ src, alt }) {
+  return <img src={src} alt={alt} />;
 }
 
 export default ListItemIcon;

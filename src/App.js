@@ -15,20 +15,20 @@ function App() {
       <main className="pokemonList colorfulBorder">
         <List>
           <ListItem href="#">
-            <ListItemIcon src="" alt="" />
+            <ListItemIcon src="A" alt="A" />
             <ListItemText title="Bulbasaur" secondarytitle="#001" />
           </ListItem>
           <ListItem href="#">
-            <ListItemIcon src="" alt="" />
+            <ListItemIcon src="A" alt="A" />
             <ListItemText title="Ivysaur" secondarytitle="#002" />
           </ListItem>
           <ListItem href="#">
-            <ListItemIcon src="" alt="" />
+            <ListItemIcon src="A" alt="A" />
             <ListItemText title="Venusaur" secondarytitle="#003" />
           </ListItem>
         </List>
       </main>
-      <footer>Tabs</footer>
+      <footer className="bottomNav">Tabs</footer>
     </div>
   );
 }
