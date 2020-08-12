@@ -1,0 +1,12 @@
+.listItemText {
+  flex-grow: 1;
+}
+
+.listItemText_title {
+  font-weight: bolder;
+}
+
+.listItemText_secondtitle {
+  font-size: 0.8rem;
+  color: grey;
+}
