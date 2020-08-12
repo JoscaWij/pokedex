@@ -17,6 +17,8 @@ function App() {
           <ListItem href="#">
             <ListItemIcon src="A" alt="A" />
             <ListItemText title="Bulbasaur" secondarytitle="#001" />
+            <ListItemIcon src="A" alt="A" />
+            <ListItemIcon src="A" alt="A" />
           </ListItem>
           <ListItem href="#">
             <ListItemIcon src="A" alt="A" />
