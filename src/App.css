@@ -34,3 +34,9 @@
   color: white;
   height: 100%;
 }
+
+.colorfulBoder {
+  border-style: solid;
+  border-color: grey;
+  border-width: 5px 0;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import List from "./components/List";
 
 function App() {
   return (
@@ -8,7 +9,9 @@ function App() {
         Pokedex
         <input className="search" placeholder="  Enter Pokémon" />
       </header>
-      <main className="pokemonList">Pokemons-List</main>
+      <main className="pokemonList colorfulBoder">
+        <List></List>
+      </main>
       <footer>Tabs</footer>
     </div>
   );
