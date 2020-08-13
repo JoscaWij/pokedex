@@ -5,6 +5,20 @@ import ListItem from "./components/ListItem";
 import ListItemAvatar from "./components/ListItemAvatar";
 import ListItemText from "./components/ListItemText";
 
+const bulbasaur = {
+  name: "Bulbasaur",
+  imgSrc: "https://img.pokemondb.net/artwork/large/bulbasaur.jpg",
+  id: "001",
+  link: "#bulbasaur",
+};
+const ivysaur = {
+  name: "Ivysaur",
+  imgSrc: "https://img.pokemondb.net/artwork/large/ivysaur.jpg",
+  id: "002",
+  link: "#ivysaur",
+};
+const allPokemons = [bulbasaur, ivysaur];
+
 function App() {
   return (
     <div className="app">
@@ -14,20 +28,18 @@ function App() {
       </header>
       <main className="pokemonList colorfulBorder">
         <List>
-          <ListItem href="#">
-            <ListItemAvatar src="A" alt="A" />
-            <ListItemText title="Bulbasaur" secondarytitle="#001" />
-            {/* <ListItemIcon src="B" alt="B" />
-            <ListItemIcon src="B" alt="B" /> */}
-          </ListItem>
-          <ListItem href="#">
-            <ListItemAvatar src="A" alt="A" />
-            <ListItemText title="Ivysaur" secondarytitle="#002" />
-          </ListItem>
-          <ListItem href="#">
-            <ListItemAvatar src="A" alt="A" />
-            <ListItemText title="Venusaur" secondarytitle="#003" />
-          </ListItem>
+          {allPokemons.map((pokemon) => (
+            <ListItem key={pokemon.id} href={pokemon.link}>
+              <ListItemAvatar
+                src={pokemon.imgSrc}
+                alt={`Picture of ${pokemon.name}`}
+              />
+              <ListItemText
+                title={pokemon.name}
+                secondarytitle={`#${pokemon.id}`}
+              />
+            </ListItem>
+          ))}
         </List>
       </main>
       <footer className="bottomNav">Tabs</footer>
