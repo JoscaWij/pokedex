@@ -25,6 +25,7 @@ function App() {
       <header className="headerSearch">
         Pokedex
         <input className="search" placeholder="  Enter Pokémon" />
+        <button onClick={() => alert("catch them!")}>Catch them all!</button>
       </header>
       <main className="pokemonList colorfulBorder">
         <List>
