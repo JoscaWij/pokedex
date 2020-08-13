@@ -23,17 +23,22 @@ const allPokemons = [bulbasaur, ivysaur]; */
 function App() {
   const [pokemons, setPokemons] = React.useState(null);
 
-  async function handleClick() {
-    const allPokemons = await fetchPokemons();
-    setPokemons(allPokemons);
-  }
+  useEffect(() => {
+    async function fetchData() {
+      const allPokemons = await fetchPokemons();
+      setPokemons(allPokemons);
+    }
+    fetchData();
+  }, []);
+  /*   async function handleClick() {
+  } */
 
   return (
     <div className="app">
       <header className="headerSearch">
         Pokedex
         <input className="search" placeholder="  Enter Pokémon" />
-        <button onClick={handleClick}>Catch them all!</button>
+        {/*  <button onClick={handleClick}>Catch them all!</button> */}
       </header>
       <main className="pokemonList colorfulBorder">
         <List>
