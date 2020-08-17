@@ -6,6 +6,7 @@ import {
   Switch,
   Route,
   Redirect,
+  Link,
 } from "react-router-dom";
 import Items from "./pages/Items";
 
@@ -38,7 +39,10 @@ function App() {
             <Redirect to="/pokemons" />
           </Route>
         </Switch>
-        <footer className="bottomNav">Links </footer>
+        <footer className="bottomNav">
+          <Link to="/pokemons">Pokemons</Link>
+          <Link to="/items">Items</Link>
+        </footer>
       </div>
     </Router>
   );
