@@ -1,0 +1,19 @@
+.pokemon_details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.pokemon_details > * {
+  flex-basis: 100%;
+  padding: 1em;
+}
+
+.pokemon_details > button {
+  position: absolute;
+  left: 1em;
+  border-radius: 50%;
+  border-width: 0.5px;
+}

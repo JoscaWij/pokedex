@@ -10,7 +10,23 @@ export async function fetchPokemons() {
     name: pokemon.name,
     id: pokemon.national_number,
     imgSrc: pokemon.sprites.animated,
-    link: `#${pokemon.name.toLowerCase()}`,
+    link: pokemon.name.toLowerCase(),
   }));
   return pokemons;
+}
+
+export async function fetchPokemon(pokemonName) {
+  const response = await fetch(
+    `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+  );
+  if (!response.ok) {
+    throw new Error(response);
+  }
+  const result = await response.json();
+  const pokemon = {
+    name: result.name,
+    id: result.id,
+    imgSrc: result.sprites.front_default,
+  };
+  return pokemon;
 }
