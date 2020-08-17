@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import Pokemons from "./pages/Pokemons";
+import { Router, Switch, Route } from "react-router-dom";
 
 /* const bulbasaur = {
   name: "Bulbasaur",
@@ -18,16 +19,20 @@ const allPokemons = [bulbasaur, ivysaur]; */
 
 function App() {
   return (
-    <>
+    <Router>
       {/* {isLoading ( */}
       <div className="app">
-        <Pokemons />
+        <Switch>
+          <Route path="/pokemons">
+            <Pokemons />
+          </Route>
+        </Switch>
         <footer className="bottomNav">Tabs</footer>
       </div>
       {/* : (
         <LoadingScreen />
       ) */}
-    </>
+    </Router>
   );
 }
 
