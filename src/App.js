@@ -1,7 +1,13 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import Pokemons from "./pages/Pokemons";
-import { Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import Items from "./pages/Items";
 
 /* const bulbasaur = {
   name: "Bulbasaur",
@@ -20,18 +26,20 @@ const allPokemons = [bulbasaur, ivysaur]; */
 function App() {
   return (
     <Router>
-      {/* {isLoading ( */}
       <div className="app">
         <Switch>
           <Route path="/pokemons">
             <Pokemons />
           </Route>
+          <Route path="/items">
+            <Items />
+          </Route>
+          <Route path="/">
+            <Redirect to="/pokemons" />
+          </Route>
         </Switch>
-        <footer className="bottomNav">Tabs</footer>
+        <footer className="bottomNav">Links </footer>
       </div>
-      {/* : (
-        <LoadingScreen />
-      ) */}
     </Router>
   );
 }
