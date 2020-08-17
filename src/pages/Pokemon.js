@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { fetchPokemon } from "../api/pokemon";
 import LoadingScreen from "../components/LoadingScreen";
 
@@ -7,6 +7,7 @@ function Pokemon() {
   const [pokemon, setPokemon] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const history = useHistory();
 
   const { name } = useParams();
   useEffect(() => {
@@ -35,7 +36,8 @@ function Pokemon() {
 
   return (
     <div>
-      <span>Name: {pokemon.name}</span>
+      <button onClick={() => history.goBack()}>X</button>
+      <div>Name: {pokemon.name}</div>
       <div>ID: {pokemon.id}</div>
       <div>
         <img src={pokemon.imgSrc} alt={pokemon.name} />
