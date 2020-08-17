@@ -5,21 +5,25 @@ import ListItemAvatar from "../components/ListItemAvatar";
 import ListItemText from "../components/ListItemText";
 /* import LoadingScreen from "../components/LoadingScreen"; */
 import { fetchPokemons } from "../api/pokemon";
+import LoadingScreen from "../components/LoadingScreen";
 
 function Pokemons(props) {
   const [pokemons, setPokemons] = React.useState(null);
-  /*   const [isLoading, setIsLoading] = React.useState(false); */
+  const [isLoading, setIsLoading] = React.useState(false);
 
   useEffect(() => {
     async function fetchData() {
-      /* setIsLoading(true); */
+      setIsLoading(true);
       const allPokemons = await fetchPokemons();
       setPokemons(allPokemons);
-      /* setIsLoading(false); */
+      setIsLoading(false);
     }
     fetchData();
   }, []);
 
+  if (isLoading || !pokemons) {
+    return <LoadingScreen />;
+  }
   return (
     <>
       <header className="headerSearch">
