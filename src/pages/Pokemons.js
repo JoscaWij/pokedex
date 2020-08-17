@@ -30,7 +30,7 @@ function Pokemons(props) {
       <main className="pokemonList colorfulBorder">
         <List>
           {pokemons?.map((pokemon) => (
-            <ListItem key={pokemon.id} href={pokemon.link}>
+            <ListItem key={pokemon.id} href={`/pokemons/${pokemon.link}`}>
               <ListItemAvatar
                 src={pokemon.imgSrc}
                 alt={`Picture of ${pokemon.name}`}

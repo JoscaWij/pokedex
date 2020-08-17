@@ -10,7 +10,7 @@ export async function fetchPokemons() {
     name: pokemon.name,
     id: pokemon.national_number,
     imgSrc: pokemon.sprites.animated,
-    link: `#${pokemon.name.toLowerCase()}`,
+    link: pokemon.name.toLowerCase(),
   }));
   return pokemons;
 }
