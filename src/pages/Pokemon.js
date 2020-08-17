@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { fetchPokemon } from "../api/pokemon";
 import LoadingScreen from "../components/LoadingScreen";
+import "./Pokemon.css";
 
 function Pokemon() {
   const [pokemon, setPokemon] = useState(null);
@@ -35,7 +36,7 @@ function Pokemon() {
   }
 
   return (
-    <div>
+    <div className="pokemon_details">
       <button onClick={() => history.goBack()}>X</button>
       <div>Name: {pokemon.name}</div>
       <div>ID: {pokemon.id}</div>

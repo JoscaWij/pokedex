@@ -62,4 +62,6 @@
     rgba(172, 199, 249, 1) 0%,
     rgba(206, 255, 198, 1) 100%
   );
+  display: flex;
+  justify-content: space-around;
 }
